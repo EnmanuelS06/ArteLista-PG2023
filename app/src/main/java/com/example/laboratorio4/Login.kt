@@ -19,6 +19,7 @@ class Login : AppCompatActivity() {
         tvcrearCuenta.setOnClickListener{ v->
             val intent= Intent(v.context,activity_CrearCuenta::class.java)
             startActivity(intent)
+
         }
     }
 }
