@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Laboratorio4</string>
+    <string name="hint_UserName">User name:</string>
+    <string name="hint_Password">Password:</string>
+    <string name="strLogin">Login</string>
+    <string name="stremail">Correo</string>
+    <string name="strCrearCuenta">Crear Cuenta</string>
+    <string name="ConfirmarPW">Confirmar Contraseña</string>
+</resources>
