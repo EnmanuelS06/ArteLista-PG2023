@@ -18,7 +18,8 @@
         <activity
             android:name=".activity_CrearCuenta"
             android:exported="false"
-            android:theme="@style/Theme.Laboratorio4">
+            android:theme="@style/Theme.ArteLista"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Login" />

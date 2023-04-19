@@ -7,15 +7,19 @@ import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import com.example.laboratorio4.databinding.ActivitySplashscreenBinding
 import java.lang.Exception
 
 class splashscreen : AppCompatActivity() {
+    private lateinit var binding: ActivitySplashscreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
        try {
            super.onCreate(savedInstanceState)
-           setContentView(R.layout.activity_splashscreen)
+           binding= ActivitySplashscreenBinding.inflate(layoutInflater)
+           val view = binding.root
+           setContentView(view)
 
-           val LogoApp:ImageView = findViewById(R.id.imgartelista)
+           val LogoApp:ImageView = binding.imgartelista
            val AnimLogo:Animation= AnimationUtils.loadAnimation(this, R.anim.anim1)
            LogoApp.startAnimation(AnimLogo)
 

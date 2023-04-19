@@ -8,6 +8,7 @@
     <string name="stremail">E-mail</string>
     <string name="strCrearCuenta">Create account</string>
     <string name="ConfirmarPW">Confirm Password</string>
+    <string name="CreateHeader">Create Account</string>
     <string name="title_activity_menu">Menu</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
