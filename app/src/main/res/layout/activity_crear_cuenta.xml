@@ -55,7 +55,7 @@
         android:id="@+id/createBtn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/margen6"
-        android:hint="Crear Cuenta"
+        android:hint="@string/HintCreate"
         android:textSize="@dimen/tamtexto2"
         android:textColorHint="@color/white"
         android:background="@drawable/shape_button"

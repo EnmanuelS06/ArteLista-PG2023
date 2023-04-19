@@ -8,16 +8,17 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgLog"
-        android:layout_width="321dp"
-        android:layout_height="235dp"
+        android:layout_width="288dp"
+        android:layout_height="212dp"
         android:layout_marginLeft="@dimen/margen3"
         android:layout_marginRight="@dimen/margen3"
         android:background="@drawable/login"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.143" />
+        app:layout_constraintVertical_bias="0.131" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editUserName"
@@ -70,7 +71,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        android:text="No tienes una cuenta? Registrate"
+        android:text="@string/Register"
         android:textAlignment="center"
         android:textColor="@color/Rosa1"
         />

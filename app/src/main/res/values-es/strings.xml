@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ArteLista</string>
+    <string name="Register">No tienes una cuenta? Registrate</string>
+    <string name="HintCreate">Crear Cuenta</string>
+    <string name="hint_UserName">Nombre de Usuario:</string>
+    <string name="hint_Password">Contraseña:</string>
+    <string name="strLogin">Ingresar</string>
+    <string name="stremail">Correo Electronico</string>
+    <string name="strCrearCuenta">Crear Cuenta</string>
+    <string name="ConfirmarPW">Confirmar Contraseña</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_home">Principal</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notificaciones</string>
+</resources>

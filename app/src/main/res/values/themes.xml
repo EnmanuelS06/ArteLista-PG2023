@@ -13,4 +13,16 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.ArteLista" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--Primary Brand Color -->
+        <item name="colorPrimary">@color/Naranja1</item>
+        <item name="colorPrimaryVariant">@color/Naranja2</item>
+        <item name="colorOnPrimary">@color/teal_200</item>
+        <!--Secondary Brand Color -->
+        <item name="colorSecondary">@color/Rosa1</item>
+        <item name="colorSecondaryVariant">@color/Rosa2</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Bar Brand Color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
 </resources>
