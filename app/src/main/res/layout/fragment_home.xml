@@ -9,6 +9,7 @@
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment"
     android:gravity="center">
+
    <TextView
        android:id="@+id/textHome"
        android:layout_width="match_parent"

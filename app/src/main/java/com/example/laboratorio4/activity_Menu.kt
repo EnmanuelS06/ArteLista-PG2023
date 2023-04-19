@@ -29,7 +29,7 @@ class   activity_Menu : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_arte, R.id.navigation_evento, R.id.navigation_Artista
             )
         )
-        /*setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)*/
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 }
