@@ -11,6 +11,7 @@
     <string name="CreateHeader">Create Account</string>
     <string name="title_activity_menu">Menu</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_Arte">Art</string>
+    <string name="title_eventos">Events</string>
+    <string name="title_artista">Artist</string>
 </resources>

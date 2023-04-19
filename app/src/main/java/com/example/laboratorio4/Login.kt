@@ -17,7 +17,7 @@ class Login : AppCompatActivity() {
         setContentView(view)
         val btnIniciarSesion:Button= binding.btnLogin
         btnIniciarSesion.setOnClickListener { v ->
-            val intent = Intent(v.context, MainActivity::class.java)
+            val intent = Intent(v.context, activity_Menu::class.java)
             startActivity(intent)
         }
         val tvcrearCuenta: TextView=binding.registrar

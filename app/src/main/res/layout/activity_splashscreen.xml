@@ -10,7 +10,7 @@
         android:id="@+id/imgartelista"
         android:layout_width="255dp"
         android:layout_height="255dp"
-        android:background="@drawable/LogoAorus"
+        android:background="@drawable/logoaorus"
         android:backgroundTint="@color/Rosa2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

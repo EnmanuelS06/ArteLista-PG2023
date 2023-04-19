@@ -9,7 +9,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.laboratorio4.databinding.ActivityMenuBinding
 
-class activity_Menu : AppCompatActivity() {
+class   activity_Menu : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
 
@@ -26,10 +26,10 @@ class activity_Menu : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_home, R.id.navigation_arte, R.id.navigation_evento, R.id.navigation_Artista
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        /*setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)*/
     }
 }
