@@ -14,7 +14,8 @@
         <activity
             android:name=".activity_Menu"
             android:exported="false"
-            android:label="@string/title_activity_menu" />
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.Laboratorio4"/>
         <activity
             android:name=".activity_CrearCuenta"
             android:exported="false"

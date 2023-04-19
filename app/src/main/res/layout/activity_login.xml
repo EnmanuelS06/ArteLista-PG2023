@@ -8,11 +8,12 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgLog"
-        android:layout_width="288dp"
-        android:layout_height="212dp"
+        android:layout_width="278dp"
+        android:layout_height="234dp"
         android:layout_marginLeft="@dimen/margen3"
         android:layout_marginRight="@dimen/margen3"
-        android:background="@drawable/login"
+        android:background="@drawable/logoaorus"
+        android:backgroundTint="@color/Rosa2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintLeft_toLeftOf="parent"

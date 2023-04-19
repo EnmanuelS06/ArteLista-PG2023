@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_eventos" />
     <fragment
         android:id="@+id/navigation_Artista"
-        android:name="com.example.laboratorio4.ui.arte.DashboardFragment"
+        android:name="com.example.laboratorio4.ui.artista.ArtistaFragment"
         android:label="@string/title_artista"
         tools:layout="@layout/fragment_artista" />
 </navigation>
