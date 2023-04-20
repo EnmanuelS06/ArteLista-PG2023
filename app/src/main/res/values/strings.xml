@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ArteLista</string>
-    <string name="Register">No account? Register here</string>
+    <string name="Register">Register here</string>
+    <string name="QMark">No account?</string>
     <string name="HintCreate">Create Account</string>
     <string name="hint_UserName">User name:</string>
     <string name="hint_Password">Password:</string>

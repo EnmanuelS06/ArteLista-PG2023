@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ArteLista</string>
-    <string name="Register">No tienes una cuenta? Registrate</string>
+    <string name="Register">Registrate</string>
+    <string name="QMark">No tienes una cuenta?</string>
     <string name="HintCreate">Crear Cuenta</string>
     <string name="hint_UserName">Nombre de Usuario:</string>
     <string name="hint_Password">Contraseña:</string>
