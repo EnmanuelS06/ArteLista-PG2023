@@ -16,4 +16,10 @@
     <string name="title_eventos">Eventos</string>
     <string name="title_artista">Artista</string>
     <string name="CreateHeader">Crear Cuenta</string>
+    <string name="strGaleria">Galeria</string>
+    <string name="strNombreArtista">Rafael Pérez</string>
+    <string name="strTituloArte">La Noche Mágica</string>
+    <string name="strLikeMeGusta">8 Me gusta</string>
+    <string name="strPrecioArte">1,200</string>
+    <string name="strMoneda">C$</string>
 </resources>

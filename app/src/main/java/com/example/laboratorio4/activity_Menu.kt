@@ -3,8 +3,10 @@ package com.example.laboratorio4
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.laboratorio4.databinding.ActivityMenuBinding
@@ -17,19 +19,13 @@ class   activity_Menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMenuBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        val navView: BottomNavigationView = binding.navView
-
-        val navController = findNavController(R.id.nav_host_fragment_activity_menu)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_arte, R.id.navigation_evento, R.id.navigation_Artista
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        val view = binding.root
+        setContentView(view)
+        configNav()
+    }
+    protected fun configNav()
+    {
+        val bMenu:BottomNavigationView= binding.navView
+        NavigationUI.setupWithNavController(bMenu,Navigation.findNavController(this,R.id.nav_host_fragment_activity_menu))
     }
 }

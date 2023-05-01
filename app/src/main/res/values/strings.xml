@@ -15,4 +15,11 @@
     <string name="title_Arte">Art</string>
     <string name="title_eventos">Events</string>
     <string name="title_artista">Artist</string>
+    <string name="strGaleria">Galeria</string>
+    <!--Strings -->
+    <string name="strNombreArtista">Rafael Pérez</string>
+    <string name="strTituloArte">La Noche Mágica</string>
+    <string name="strLikeMeGusta">8 Me gusta</string>
+    <string name="strPrecioArte">1,200</string>
+    <string name="strMoneda">C$</string>
 </resources>

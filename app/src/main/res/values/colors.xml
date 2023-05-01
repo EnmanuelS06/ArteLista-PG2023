@@ -11,4 +11,6 @@
     <color name="Naranja1">#FC733F</color>
     <color name="Naranja2">#E04E38</color>
     <color name="Rosa2">#F74A53</color>
+    <color name="grisdegradado">#53292929</color>
+    <color name="grisclaro">#cfd8dc</color>
 </resources>
