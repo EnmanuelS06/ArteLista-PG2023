@@ -15,7 +15,11 @@
         android:id="@+id/navigation_arte"
         android:name="com.example.laboratorio4.ui.arte.DashboardFragment"
         android:label="@string/title_Arte"
-        tools:layout="@layout/fragment_arte" />
+        tools:layout="@layout/fragment_arte" >
+        <action
+            android:id="@+id/action_navigation_arte_to_fragment_galeriadet"
+            app:destination="@id/fragment_galeriadet" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_evento"
@@ -27,4 +31,9 @@
         android:name="com.example.laboratorio4.ui.artista.ArtistaFragment"
         android:label="@string/title_artista"
         tools:layout="@layout/fragment_artista" />
+    <fragment
+        android:id="@+id/fragment_galeriadet"
+        android:name="com.example.laboratorio4.ui.arte.fragment_galeriadet"
+        android:label="fragment_galeriadet"
+        tools:layout="@layout/fragment_galeriadet" />
 </navigation>

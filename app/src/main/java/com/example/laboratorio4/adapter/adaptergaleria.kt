@@ -37,10 +37,10 @@ class adaptergaleria(Galerias:ArrayList<galeria>,resource:Int, activity: Activit
         holder.tvPrecioGaleria.setText(galeria.getpreciogaleria())
         holder.tvTituloGaleria.setText(galeria.gettitulogaleria())
         Picasso.get().load(galeria.getimagengaleria()).into(holder.imgGaleria)
-       /* holder.itemView.setOnClickListener{
+       holder.itemView.setOnClickListener{
             Navigation.findNavController(holder.itemView).navigate(R.id.fragment_galeriadet)
 
-        }*/
+        }
 
     }
 

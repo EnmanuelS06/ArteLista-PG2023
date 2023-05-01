@@ -22,4 +22,11 @@
     <string name="strLikeMeGusta">8 Me gusta</string>
     <string name="strPrecioArte">1,200</string>
     <string name="strMoneda">C$</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="transition_galeriadet">transicion_galeriadet</string>
+    <!-- Pantalla galería detalle -->
+    <string name="strCategoriaGaleria">Arte en Oleo</string>
+    <string name="strDescripcionGaleria">I was born in the capital of Nicaragua, my passion has been oil painting, being my favorite oil paintings.
+        As a child I started painting in a natural way, then I was perfecting my technique in professional schools. I have more than 10 years of experience in painting.</string>
 </resources>
