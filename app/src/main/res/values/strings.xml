@@ -38,4 +38,8 @@
     <string name="strDireccionEvento">District 1. Managua, Nicaragua</string>
     <string name="strSitioWebEvento">www.uni.edu.ni</string>
     <string name="strTelefonoEvento">22705126</string>
+    <!--Artist strings-->
+    <string name="strArtista">Artist</string>
+    <string name="strCategoriaArtista">Plastic Artist</string>
+    <string name="strPaisArtista">Nicaragua</string>
 </resources>

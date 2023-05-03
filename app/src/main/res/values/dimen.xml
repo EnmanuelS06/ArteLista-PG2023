@@ -18,7 +18,6 @@
     <dimen name="tam2">1dp</dimen>
     <dimen name="tam3">250dp</dimen>
     <dimen name="tam4">350dp</dimen>
-
     <dimen name="tamTexto3">24sp</dimen>
     <dimen name="tamTexto4">36sp</dimen>
     <dimen name="tamTexto5">14sp</dimen>
