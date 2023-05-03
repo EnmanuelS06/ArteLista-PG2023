@@ -19,11 +19,7 @@ class ArtistaFragment : Fragment() {
 
     private  var _binding:FragmentArtistaBinding? = null
     private val binding get() = _binding!!
-   /* companion object {
-        fun newInstance() = ArtistaFragment()
-    }*/
 
-   /* private lateinit var viewModel: ArtistaViewModel*/
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

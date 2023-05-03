@@ -1,60 +1,55 @@
 package com.example.laboratorio4.ui.artista
 
+import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.DialogFragment
+import androidx.navigation.Navigation
 import com.example.laboratorio4.R
+import com.example.laboratorio4.databinding.FragmentArtistDetBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ArtistDetFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ArtistDetFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class ArtistDetFragment : DialogFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private var _binding:FragmentArtistDetBinding?= null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_artist_det, container, false)
+        setStyle(DialogFragment.STYLE_NORMAL, R.style.DialogStyle)
+        _binding= FragmentArtistDetBinding.inflate(inflater,container,false)
+        val root: View=binding.root
+        //-----------
+        val toolbar:Toolbar= _binding!!.tbArtistasDet
+        (activity as AppCompatActivity).setSupportActionBar(toolbar)
+        toolbar.navigationIcon =  ContextCompat.getDrawable(requireActivity(), R.drawable.ic_left)
+        toolbar.setTitle("Datos del Artista")
+        toolbar.setTitleTextColor(Color.WHITE)
+        toolbar.setNavigationOnClickListener {
+            dismiss()
+            Navigation.findNavController(it).navigateUp()
+        }
+
+
+
+        return root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ArtistDetFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ArtistDetFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding=null
     }
+
+    override fun onStart() {
+        super.onStart()
+        dialog?.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT)
+    }
+
+
 }

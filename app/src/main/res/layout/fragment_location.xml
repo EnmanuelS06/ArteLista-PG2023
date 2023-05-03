@@ -14,13 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/tam1"
         >
-        <Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/tbUbicacion"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-        </Toolbar>
+            android:layout_height="wrap_content">
+        </androidx.appcompat.widget.Toolbar>>
 
     </com.google.android.material.appbar.AppBarLayout>
     <ImageView
