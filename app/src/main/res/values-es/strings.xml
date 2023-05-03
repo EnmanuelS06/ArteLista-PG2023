@@ -40,4 +40,9 @@
     <string name="strArtista">Artista</string>
     <string name="strCategoriaArtista">Artista Plastico</string>
     <string name="strPaisArtista">Nicaragua</string>
+    <string name="strAbout">Acerca de mi</string>
+    <string name="strAboutme">Nací en la capital de Nicaragua, mi pasión ha sido la pintura en Oleo, siendo mis favoritas las pinturas en oleo.
+        Durante niño me inicié en la pintura de forma nata, luego fui perfeccionando mi técnica en escuelas profesionales.
+        Tengo mas de 10 años de experiencia en pintura</string>
+    <string name="strCuentaTwitter">\@Alquimid3s</string>
 </resources>

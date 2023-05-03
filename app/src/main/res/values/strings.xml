@@ -42,4 +42,10 @@
     <string name="strArtista">Artist</string>
     <string name="strCategoriaArtista">Plastic Artist</string>
     <string name="strPaisArtista">Nicaragua</string>
+    <string name="strAbout">About Me</string>
+    <string name="strAboutme">I was born in the capital of Nicaragua, my passion has been oil painting, being my favorite oil paintings.
+        As a child I was initiated in painting in a natural way, then I was perfecting my technique in professional schools.
+        I have more than 10 years of experience in painting</string>
+    <string name="strCuentaTwitter">\@Alquimid3s</string>.
+
 </resources>
