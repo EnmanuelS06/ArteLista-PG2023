@@ -25,5 +25,9 @@
     <string name="transition_galeriadet">transicion_galeriadet</string>
     <!-- Pantalla galería detalle -->
     <string name="strCategoriaGaleria">Arte en Oleo</string>
-    <string name="strDescripcionGaleria">Nací en la capital de Nicaragua, mi pasión ha sido la pintura en Oleo, siendo mis favoritas las pinturas en oleo. Durante niño me inicié en la pintura de forma nata, luego fui perfeccionando mi técnica en escuelas profesionales. Tengo mas de 10 años de experiencia en pintura.</string>
+    <string name="strDescripcionGaleria">Nací en la capital de Nicaragua, mi pasión ha sido la pintura en Oleo, siendo mis favoritas las pinturas en oleo.
+        Durante niño me inicié en la pintura de forma nata, luego fui perfeccionando mi técnica en escuelas profesionales. Tengo mas de 10 años de experiencia en pintura.</string>
+    <string name="strEvento">Evento</string>
+    <string name="strTituloEvento">Exposición Primavera en Oleo</string>
+    <string name="strCategoriaEvento">Arte en Oleo</string>
 </resources>

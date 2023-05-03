@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_arte"
-        android:name="com.example.laboratorio4.ui.arte.DashboardFragment"
+        android:name="com.example.laboratorio4.ui.galeria.GaleriaFragment"
         android:label="@string/title_Arte"
         tools:layout="@layout/fragment_arte" >
         <action
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/navigation_evento"
-        android:name="com.example.laboratorio4.ui.evento.NotificationsFragment"
+        android:name="com.example.laboratorio4.ui.evento.EventoFragment"
         android:label="@string/title_eventos"
         tools:layout="@layout/fragment_eventos" />
     <fragment
@@ -33,7 +33,7 @@
         tools:layout="@layout/fragment_artista" />
     <fragment
         android:id="@+id/fragment_galeriadet"
-        android:name="com.example.laboratorio4.ui.arte.fragment_galeriadet"
+        android:name="com.example.laboratorio4.ui.galeria.fragment_galeriadet"
         android:label="fragment_galeriadet"
         tools:layout="@layout/fragment_galeriadet" />
 </navigation>

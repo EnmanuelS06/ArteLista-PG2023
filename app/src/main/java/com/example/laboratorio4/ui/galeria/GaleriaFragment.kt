@@ -1,11 +1,10 @@
-package com.example.laboratorio4.ui.arte
+package com.example.laboratorio4.ui.galeria
 
 import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,7 +14,7 @@ import com.example.laboratorio4.adapter.adaptergaleria
 import com.example.laboratorio4.databinding.FragmentArteBinding
 import com.example.laboratorio4.model.galeria
 
-class DashboardFragment : Fragment() {
+class GaleriaFragment : Fragment() {
 
     private var _binding: FragmentArteBinding? = null
 

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.arte.fragment_galeriadet">
+    tools:context=".ui.galeria.fragment_galeriadet">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/abGaleriadet"
         android:layout_width="match_parent"
