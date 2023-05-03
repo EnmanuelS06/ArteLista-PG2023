@@ -30,4 +30,10 @@
     <string name="strEvento">Evento</string>
     <string name="strTituloEvento">Exposición Primavera en Oleo</string>
     <string name="strCategoriaEvento">Arte en Oleo</string>
+
+    <!--Location Strings es-->
+    <string name="strUbicacionEvento">Palacio de la Cultura</string>
+    <string name="strDireccionEvento">Distrito 1. Managua, Nicaragua</string>
+    <string name="strSitioWebEvento">www.uni.edu.ni</string>
+    <string name="strTelefonoEvento">22705126</string>
 </resources>

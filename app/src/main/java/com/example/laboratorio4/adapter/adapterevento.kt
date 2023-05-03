@@ -35,10 +35,10 @@ class adapterevento(Eventos:ArrayList<evento>, resource:Int, activity: Activity)
         holder.tvTituloEvento.setText(evento.gettituloevento())
         holder.tvHoraEvento.setText(evento.gethoraevento())
         holder.tvEventCategory.setText(evento.getcategoriaevento())
-       /* holder.itemView.setOnClickListener{
-            Navigation.findNavController(holder.itemView).navigate(R.id.fragment_galeriadet)
+       holder.itemView.setOnClickListener{
+            Navigation.findNavController(holder.itemView).navigate(R.id.locationFragment)
 
-        }*/
+        }
 
     }
 

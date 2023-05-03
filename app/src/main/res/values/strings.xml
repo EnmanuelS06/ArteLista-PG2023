@@ -32,4 +32,10 @@
     <string name="strEvento">Event</string>
     <string name="strTituloEvento">Spring in Oil Exhibition</string>
     <string name="strCategoriaEvento">Oil art</string>
+
+    <!--Location Strings-->
+    <string name="strUbicacionEvento">Palace of Culture</string>
+    <string name="strDireccionEvento">District 1. Managua, Nicaragua</string>
+    <string name="strSitioWebEvento">www.uni.edu.ni</string>
+    <string name="strTelefonoEvento">22705126</string>
 </resources>
