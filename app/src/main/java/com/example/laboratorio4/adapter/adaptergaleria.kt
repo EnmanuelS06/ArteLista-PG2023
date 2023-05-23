@@ -10,43 +10,40 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.laboratorio4.model.galeria
 import com.example.laboratorio4.R
+import com.example.laboratorio4.ui.galeria.galeriaListener
 import com.squareup.picasso.Picasso
 
-class adaptergaleria(Galerias:ArrayList<galeria>,resource:Int, activity: Activity): RecyclerView.Adapter<adaptergaleria.GaleriaViewHolder>() {
-    private val galerias:ArrayList<galeria>
-    private val resource:Int
-    private val activity:Activity
+class adaptergaleria(val GaleriaListener: galeriaListener): RecyclerView.Adapter<adaptergaleria.GaleriaViewHolder>() {
+    var listGaleria = ArrayList<galeria>()
 
-    init{
-        this.galerias=Galerias
-        this.resource=resource
-        this.activity=activity
-    }
-
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): adaptergaleria.GaleriaViewHolder {
-        val view= LayoutInflater.from(parent.context).inflate(resource,parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType:Int): GaleriaViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_galeria, parent, false)
         return GaleriaViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: adaptergaleria.GaleriaViewHolder, position: Int) {
-        val galeria :galeria=galerias[position]
-        holder.tvArtistaGaleria.setText(galeria.getartistagaleria())
-        holder.tvPrecioGaleria.setText(galeria.getpreciogaleria())
-        holder.tvTituloGaleria.setText(galeria.gettitulogaleria())
-        Picasso.get().load(galeria.getimagengaleria()).into(holder.imgGaleria)
-       holder.itemView.setOnClickListener{
-            Navigation.findNavController(holder.itemView).navigate(R.id.fragment_galeriadet)
 
+    override fun onBindViewHolder(holder: GaleriaViewHolder, position:Int){
+        val galeria: galeria = listGaleria[position]
+        holder.tvArtistaGaleria.text = galeria.artistagaleria
+        holder.tvPrecioGaleria.text = galeria.preciogaleria
+        holder.tvTituloGaleria.text = galeria.titulogaleria
+        Picasso.get().load(galeria.imggaleria).into(holder.imgGaleria)
+        holder.itemView.setOnClickListener{
+            GaleriaListener.onGaleriaClicked(galeria, position)
         }
-
     }
+
 
     override fun getItemCount(): Int {
-        return galerias.size
+        return listGaleria.size
     }
+    fun updateData(data:List<galeria>?)
+    {
+        listGaleria.clear()
+        listGaleria.addAll(data!!)
+        notifyDataSetChanged()
+    }
+
     inner class GaleriaViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
         val tvArtistaGaleria: TextView
         val tvPrecioGaleria : TextView

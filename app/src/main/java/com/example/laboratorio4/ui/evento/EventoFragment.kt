@@ -11,10 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.laboratorio4.R
 import com.example.laboratorio4.adapter.adapterevento
-import com.example.laboratorio4.adapter.adaptergaleria
 import com.example.laboratorio4.databinding.FragmentEventosBinding
 import com.example.laboratorio4.model.evento
-import com.example.laboratorio4.model.galeria
 
 class EventoFragment : Fragment() {
 
@@ -29,8 +27,8 @@ class EventoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val eventoViewModel =
+            ViewModelProvider(this).get(EventoViewModel::class.java)
 
         _binding = FragmentEventosBinding.inflate(inflater, container, false)
         val root: View = binding.root
