@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "826615593503",
+    "project_id": "artelista2023-70dbd",
+    "storage_bucket": "artelista2023-70dbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826615593503:android:3e2c00e38e9263dd6bf32a",
+        "android_client_info": {
+          "package_name": "com.example.laboratorio4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826615593503-g224u075lfrd7o1b8qa5kvj7nulp31v9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.laboratorio4",
+            "certificate_hash": "0f192889ae19c39a7b9ae2534a08593d4d5ecc7f"
+          }
+        },
+        {
+          "client_id": "826615593503-pjinguim9mat6huvs97kq6k4rfk3fki1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYZ12u4W8jsNB7PmQyboXCjs6Q0leO8r4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826615593503-pjinguim9mat6huvs97kq6k4rfk3fki1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
