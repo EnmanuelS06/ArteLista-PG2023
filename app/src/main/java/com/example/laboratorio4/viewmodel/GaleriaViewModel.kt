@@ -12,7 +12,7 @@ class GaleriaViewModel : ViewModel() {
     //----Inicializacion
     val firestoreserivice =serviceFirestore()
     var listgaleria: MutableLiveData<List<galeria>> = MutableLiveData()
-
+    var isLoad = MutableLiveData<Boolean>()
     //---GetGaleria
     fun getGaleriaVWM(){
         firestoreserivice.getgaleria(object : ICallback<List<galeria>>{
@@ -21,9 +21,14 @@ class GaleriaViewModel : ViewModel() {
             }
 
             override fun onFailed(exception: Exception) {
-                TODO("Not yet implemented")
+                Iscargado()
             }
         })
 
     }
+
+    fun Iscargado(){
+        isLoad.value=true
+    }
+
 }

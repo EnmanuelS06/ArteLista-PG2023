@@ -49,7 +49,9 @@ class GaleriaFragment : Fragment(), galeriaListener {
             layoutManager= LinearLayoutManager(view?.context,LinearLayoutManager.VERTICAL,false)
             adapter = galeriaAdapter
         }
+
         observerViewModel()
+
         return root
     }
 
@@ -57,12 +59,17 @@ class GaleriaFragment : Fragment(), galeriaListener {
         vwmGaleria.listgaleria.observe( viewLifecycleOwner, Observer <List<galeria>>{ galeria->
             galeriaAdapter.updateData(galeria)
         })
+        /*vwmGaleria.isLoad.observe(viewLifecycleOwner, Observer {
+            if(it!=null){
+                binding.progressGaleria.visibility = View.INVISIBLE
+            }
+        })*/
     }
 
     override fun onGaleriaClicked(Galeria: galeria, position: Int) {
-        val bundle = bundleOf("galeria"  to Galeria)
+        val bundle = bundleOf("galeria" to Galeria)
         NavHostFragment.findNavController(this).navigate(R.id.fragment_galeriadet, bundle)
-       //super.onGaleriaClicked(Galeria, position)
+        //super.onGaleriaClicked(Galeria, position)
     }
 
     override fun onDestroyView() {

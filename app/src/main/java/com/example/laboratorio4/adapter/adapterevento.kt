@@ -1,49 +1,44 @@
 package com.example.laboratorio4.adapter
 
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.laboratorio4.R
 import com.example.laboratorio4.model.evento
+import com.example.laboratorio4.ui.evento.EventoFragment
+import com.example.laboratorio4.ui.evento.eventoListener
 
 
-class adapterevento(Eventos:ArrayList<evento>, resource:Int, activity: Activity): RecyclerView.Adapter<adapterevento.EventoViewHolder>() {
-    private val eventos:ArrayList<evento>
-    private val resource:Int
-    private val activity: Activity
+class adapterevento(val EventoListener: EventoFragment): RecyclerView.Adapter<adapterevento.EventoViewHolder>() {
+   var listEvento = ArrayList<evento>()
 
-    init{
-        this.eventos=Eventos
-        this.resource=resource
-        this.activity=activity
-    }
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): adapterevento.EventoViewHolder {
-        val view= LayoutInflater.from(parent.context).inflate(resource,parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType:Int): EventoViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_evento, parent, false)
         return EventoViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: adapterevento.EventoViewHolder, position: Int) {
-        val evento : evento =eventos[position]
-        holder.tvTituloEvento.setText(evento.gettituloevento())
-        holder.tvHoraEvento.setText(evento.gethoraevento())
-        holder.tvEventCategory.setText(evento.getcategoriaevento())
+    override fun onBindViewHolder(holder: EventoViewHolder, position: Int) {
+        val eventos : evento =listEvento[position]
+        holder.tvTituloEvento.text = eventos.tituloEvento
+        holder.tvHoraEvento.text = eventos.horaEvento
+        holder.tvEventCategory.text = eventos.categoriaEvento
        holder.itemView.setOnClickListener{
-            Navigation.findNavController(holder.itemView).navigate(R.id.locationFragment)
+            EventoListener.onEventoClicked(eventos,position)
 
         }
 
     }
 
     override fun getItemCount(): Int {
-        return eventos.size
+        return listEvento.size
+    }
+    fun updateData(data:List<evento>?){
+        listEvento.clear()
+        listEvento.addAll(data!!)
+        notifyDataSetChanged()
     }
     inner class EventoViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val tvTituloEvento: TextView

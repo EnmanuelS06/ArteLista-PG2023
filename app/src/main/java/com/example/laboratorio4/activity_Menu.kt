@@ -1,6 +1,7 @@
 package com.example.laboratorio4
 
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
@@ -11,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.laboratorio4.databinding.ActivityMenuBinding
 import com.example.laboratorio4.model.artista
+import com.example.laboratorio4.model.evento
 import com.example.laboratorio4.model.galeria
 import com.google.firebase.firestore.FirebaseFirestore
 import org.json.JSONArray
@@ -19,7 +21,7 @@ import org.json.JSONObject
 class   activity_Menu : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
-
+    private var IsLoaded = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -27,7 +29,14 @@ class   activity_Menu : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         configNav()
+        if(!IsLoaded){
+            Load()
+            IsLoaded=true
+        }
 
+
+    }
+    private fun Load(){
         //-----Cargar Datos Galeria
         val jsonGaleria = JSONArray("[\n" +
                 "            {\n" +
@@ -67,8 +76,10 @@ class   activity_Menu : AppCompatActivity() {
                 "                'imagengaleria' : 'https://artelista.s3.amazonaws.com/obras/big/7/2/3/1190859-5ef3a721f3127.jpg'\n" +
                 "            }\n" +
                 "        ]")
-             val fireDB: FirebaseFirestore = FirebaseFirestore.getInstance()
-            //-----------------------
+        val fireDB: FirebaseFirestore = FirebaseFirestore.getInstance()
+        //-----------------------
+        if(!IsLoaded){
+
             for (i in 0 until jsonGaleria.length())
             {
                 val objGaleria = jsonGaleria.get(i) as JSONObject
@@ -80,6 +91,7 @@ class   activity_Menu : AppCompatActivity() {
                 Galeria.titulogaleria = objGaleria.getString("titulogaleria")
                 fireDB.collection("Galeria").document().set(Galeria)
             }
+        }
         //-------Cargar datos Artista
         val jsonArtista = JSONArray( "[\n" +
                 "            {\n" +
@@ -108,18 +120,59 @@ class   activity_Menu : AppCompatActivity() {
                 "                'PaisArtista' : 'Guatemala'\n" +
                 "            }\n" +
                 "            ]")
+        if(!IsLoaded){
 
-        for(i in 0 until jsonArtista.length())
-        {
-            val objartista = jsonArtista.get(i) as JSONObject
-            var Artista = artista()
-            Artista.NombreArtista = objartista.getString("NombreArtista")
-            Artista.categoriaArtista = objartista.getString("categoriaArtista")
-            Artista.PaisArtista = objartista.getString("PaisArtista")
-            fireDB.collection("Artista").document().set(Artista)
+            for(i in 0 until jsonArtista.length())
+            {
+                val objartista = jsonArtista.get(i) as JSONObject
+                var Artista = artista()
+                Artista.NombreArtista = objartista.getString("NombreArtista")
+                Artista.categoriaArtista = objartista.getString("categoriaArtista")
+                Artista.PaisArtista = objartista.getString("PaisArtista")
+                fireDB.collection("Artista").document().set(Artista)
+            }
+            //------Cargar datos Evento
+            val jsonEvento = JSONArray( "[\n" +
+                    "            {\n" +
+                    "                'tituloEvento' : 'Armando Jose Aguirre',\n" +
+                    "                'categoriaEvento' : 'Oil',\n" +
+                    "                'horaEvento' : '08:00'\n" +
+                    "            },\n" +
+                    "            {\n" +
+                    "                'tituloEvento' : 'German Traña Obando',\n" +
+                    "                'categoriaEvento' : 'Pencil',\n" +
+                    "                'horaEvento' : '10:00'\n" +
+                    "            },\n" +
+                    "            {\n" +
+                    "                'tituloEvento' : 'Pol Ledent',\n" +
+                    "                'categoriaEvento' : 'Canva',\n" +
+                    "                'horaEvento' : '11:00'\n" +
+                    "            },\n" +
+                    "            {\n" +
+                    "               'tituloEvento' : 'Maribel Flores',\n" +
+                    "                'categoriaEvento' : 'Oil',\n" +
+                    "                'horaEvento' : '03:00'\n" +
+                    "            },\n" +
+                    "            {\n" +
+                    "              'tituloEvento' : 'Nana Tchelidze',\n" +
+                    "                'categoriaEvento' : 'Canva',\n" +
+                    "                'horaEvento' : '04:00'\n" +
+                    "            }\n" +
+                    "            ]")
+            if(!IsLoaded){
+                for(i in 0 until jsonEvento.length())
+                {
+                    val objartista = jsonEvento.get(i) as JSONObject
+                    var Evento = evento()
+                   Evento.tituloEvento = objartista.getString("tituloEvento")
+                   Evento.categoriaEvento = objartista.getString("categoriaEvento")
+                   Evento.horaEvento = objartista.getString("horaEvento")
+                    fireDB.collection("Evento").document().set(Evento)
+                }
+            }
         }
-
     }
+
     protected fun configNav()
     {
         val bMenu:BottomNavigationView= binding.navView
