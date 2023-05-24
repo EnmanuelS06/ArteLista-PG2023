@@ -21,7 +21,6 @@ import org.json.JSONObject
 class   activity_Menu : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
-    private var IsLoaded = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,14 +28,11 @@ class   activity_Menu : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         configNav()
-        if(!IsLoaded){
-            Load()
-            IsLoaded=true
-        }
+
 
 
     }
-    private fun Load(){
+    /*private fun Load(){
         //-----Cargar Datos Galeria
         val jsonGaleria = JSONArray("[\n" +
                 "            {\n" +
@@ -171,7 +167,7 @@ class   activity_Menu : AppCompatActivity() {
                 }
             }
         }
-    }
+    }*/
 
     protected fun configNav()
     {

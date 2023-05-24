@@ -11,17 +11,21 @@ class ArtistaViewModel : ViewModel() {
     // Inicializacion
     val firestoreserivice = serviceFirestore()
     var listArtista: MutableLiveData<List<artista>> = MutableLiveData()
-
+    var isLoad = MutableLiveData<Boolean>()
     fun getArtistaVwm(){
         firestoreserivice.getartista(object : ICallback<List<artista>> {
             override fun onSuccess(result: List<artista>?) {
                 listArtista.postValue(result!!)
+                Iscargado()
             }
 
             override fun onFailed(exception: Exception) {
                 println("${exception.message}")
             }
         })
+    }
+    fun Iscargado(){
+        isLoad.value=true
     }
 
 }

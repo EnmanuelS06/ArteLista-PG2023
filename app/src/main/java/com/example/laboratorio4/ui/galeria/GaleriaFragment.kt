@@ -59,11 +59,11 @@ class GaleriaFragment : Fragment(), galeriaListener {
         vwmGaleria.listgaleria.observe( viewLifecycleOwner, Observer <List<galeria>>{ galeria->
             galeriaAdapter.updateData(galeria)
         })
-        /*vwmGaleria.isLoad.observe(viewLifecycleOwner, Observer {
+        vwmGaleria.isLoad.observe(viewLifecycleOwner, Observer {
             if(it!=null){
                 binding.progressGaleria.visibility = View.INVISIBLE
             }
-        })*/
+        })
     }
 
     override fun onGaleriaClicked(Galeria: galeria, position: Int) {

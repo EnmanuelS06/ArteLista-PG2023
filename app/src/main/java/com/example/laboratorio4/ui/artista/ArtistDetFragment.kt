@@ -12,8 +12,9 @@ import androidx.fragment.app.DialogFragment
 import androidx.navigation.Navigation
 import com.example.laboratorio4.R
 import com.example.laboratorio4.databinding.FragmentArtistDetBinding
+import com.example.laboratorio4.model.artista
 
-
+@Suppress("DEPRECATION")
 class ArtistDetFragment : DialogFragment() {
 
     private var _binding:FragmentArtistDetBinding?= null
@@ -26,6 +27,10 @@ class ArtistDetFragment : DialogFragment() {
         _binding= FragmentArtistDetBinding.inflate(inflater,container,false)
         val root: View=binding.root
         //-----------
+            var objArtista = arguments?.getSerializable("artista") as artista
+            binding.tvNombreArtistaDet.text = objArtista.NombreArtista
+            binding.tvPaisArtistaDet.text = objArtista.PaisArtista
+        //--------
         val toolbar:Toolbar= _binding!!.tbArtistasDet
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
         toolbar.navigationIcon =  ContextCompat.getDrawable(requireActivity(), R.drawable.ic_left)

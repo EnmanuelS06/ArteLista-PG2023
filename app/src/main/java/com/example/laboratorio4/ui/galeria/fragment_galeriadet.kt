@@ -13,7 +13,9 @@ import androidx.fragment.app.DialogFragment
 import androidx.navigation.Navigation
 import com.example.laboratorio4.R
 import com.example.laboratorio4.databinding.FragmentGaleriadetBinding
-
+import com.example.laboratorio4.model.galeria
+import com.squareup.picasso.Picasso
+@Suppress("DEPRECATION")
 
 class fragment_galeriadet : DialogFragment() {
     private var _binding:FragmentGaleriadetBinding?=null
@@ -26,6 +28,11 @@ class fragment_galeriadet : DialogFragment() {
         _binding= FragmentGaleriadetBinding.inflate(inflater, container,false)
        val root:View = binding.root
         //-----------
+        var  objGaleria = arguments?.getSerializable("galeria") as galeria
+        binding.tvCategoriaArtista.text=objGaleria.titulogaleria
+        binding.tvArtistaDet.text=objGaleria.artistagaleria
+        Picasso.get().load(objGaleria.imggaleria).into(binding.imgdetallearte)
+        //------
         val toolbar: Toolbar = _binding!!.tbGaleriaDet
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
         toolbar.navigationIcon =  ContextCompat.getDrawable(requireActivity(), R.drawable.ic_left)

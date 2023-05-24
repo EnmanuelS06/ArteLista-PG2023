@@ -50,6 +50,11 @@ class ArtistaFragment : Fragment(),artistaListener {
         artistaVwm.listArtista.observe(viewLifecycleOwner, Observer<List<artista>>{
             artista-> adapterArtista.updatedata(artista)
         })
+        artistaVwm.isLoad.observe(viewLifecycleOwner, Observer {
+            if(it!=null){
+                binding.progressArtista.visibility = View.INVISIBLE
+            }
+        })
     }
 
     override fun OnArtistaClicked(Artista: artista, position: Int) {

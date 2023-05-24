@@ -18,10 +18,11 @@ class GaleriaViewModel : ViewModel() {
         firestoreserivice.getgaleria(object : ICallback<List<galeria>>{
             override fun onSuccess(result: List<galeria>?) {
                 listgaleria.postValue(result!!)
+                Iscargado()
             }
 
             override fun onFailed(exception: Exception) {
-                Iscargado()
+
             }
         })
 

@@ -12,11 +12,13 @@ class EventoViewModel : ViewModel() {
     //----Inicializacion
     val firestoreservice = serviceFirestore()
     var listevento:MutableLiveData<List<evento>> = MutableLiveData()
+    var isLoad = MutableLiveData<Boolean>()
 
     fun getEventoVwm(){
         firestoreservice.getevento(object :ICallback<List<evento>>{
             override fun onSuccess(result: List<evento>?) {
                 listevento.postValue(result!!)
+                Iscargado()
             }
 
             override fun onFailed(exception: Exception) {
@@ -25,6 +27,8 @@ class EventoViewModel : ViewModel() {
         })
 
         }
-
+    fun Iscargado(){
+        isLoad.value=true
+    }
 
 }

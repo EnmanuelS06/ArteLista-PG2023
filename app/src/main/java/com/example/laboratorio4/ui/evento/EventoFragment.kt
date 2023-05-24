@@ -52,6 +52,11 @@ class EventoFragment : Fragment(), eventoListener {
         eventoVwm.listevento.observe(viewLifecycleOwner, Observer<List<evento>> {
             evento-> eventoadapter.updateData(evento)
         })
+        eventoVwm.isLoad.observe(viewLifecycleOwner, Observer {
+            if(it!=null){
+                binding.progressEvento.visibility = View.INVISIBLE
+            }
+        })
     }
     /*fun getEventos(): ArrayList<evento> {
         val evento: ArrayList<evento> = ArrayList<evento>()
