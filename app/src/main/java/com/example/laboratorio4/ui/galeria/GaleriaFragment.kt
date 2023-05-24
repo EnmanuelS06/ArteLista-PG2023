@@ -21,13 +21,13 @@ import com.example.laboratorio4.viewmodel.GaleriaViewModel
 class GaleriaFragment : Fragment(), galeriaListener {
 
     private var _binding: FragmentArteBinding? = null
+    private val binding get() = _binding!!
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private lateinit var galeriaAdapter:adaptergaleria
     private lateinit var vwmGaleria:GaleriaViewModel
 
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,

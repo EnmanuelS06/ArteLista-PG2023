@@ -9,42 +9,39 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.laboratorio4.R
 import com.example.laboratorio4.model.artista
+import com.example.laboratorio4.ui.artista.artistaListener
 
-class adapterArtista (Artistas:ArrayList<artista>, resource:Int, activity: Activity): RecyclerView.Adapter<adapterArtista.ArtistaViewHolder>() {
-    private val artistas:ArrayList<artista>
-    private val resource:Int
-    private val activity: Activity
+class adapterArtista (val ArtistaListener:artistaListener): RecyclerView.Adapter<adapterArtista.ArtistaViewHolder>() {
+     var Listartistas= ArrayList<artista>()
 
-    init{
-        this.artistas=Artistas
-        this.resource=resource
-        this.activity=activity
-    }
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): adapterArtista.ArtistaViewHolder {
-        val view= LayoutInflater.from(parent.context).inflate(resource,parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType:Int): ArtistaViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_artista, parent, false)
         return ArtistaViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: adapterArtista.ArtistaViewHolder, position: Int) {
-        val artista : artista =artistas[position]
-        holder.tvNombreArtista.setText(artista.getNombreArtista())
-        holder.tvCategoriaArtista.setText(artista.getcategoriaArtista())
-        holder.tvPaisArtista.setText(artista.getPaisArtista())
-
+    override fun onBindViewHolder(holder: ArtistaViewHolder, position: Int) {
+        val artistas:artista =Listartistas[position]
+        holder.tvNombreArtista.text = artistas.NombreArtista
+        holder.tvCategoriaArtista.text = artistas.categoriaArtista
+        holder.tvPaisArtista.text = artistas.PaisArtista
        holder.itemView.setOnClickListener{
-            Navigation.findNavController(holder.itemView).navigate(R.id.artistDetFragment)
-
+            ArtistaListener.OnArtistaClicked(artistas,position)
         }
 
     }
 
     override fun getItemCount(): Int {
-        return artistas.size
+        return Listartistas.size
     }
+    fun updatedata(data:List<artista>?)
+    {
+        Listartistas.clear()
+        Listartistas.addAll(data!!)
+        notifyDataSetChanged()
+
+    }
+
     inner class ArtistaViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val tvNombreArtista: TextView
         val tvCategoriaArtista : TextView

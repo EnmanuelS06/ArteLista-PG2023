@@ -10,6 +10,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.laboratorio4.databinding.ActivityMenuBinding
+import com.example.laboratorio4.model.artista
 import com.example.laboratorio4.model.galeria
 import com.google.firebase.firestore.FirebaseFirestore
 import org.json.JSONArray
@@ -79,8 +80,44 @@ class   activity_Menu : AppCompatActivity() {
                 Galeria.titulogaleria = objGaleria.getString("titulogaleria")
                 fireDB.collection("Galeria").document().set(Galeria)
             }
-        //-------
-        TODO("Implementar JSON Evento y Artista")
+        //-------Cargar datos Artista
+        val jsonArtista = JSONArray( "[\n" +
+                "            {\n" +
+                "                'NombreArtista' : 'Armando Jose Aguirre',\n" +
+                "                'categoriaArtista' : 'Oil',\n" +
+                "                'PaisArtista' : 'Nicaragua'\n" +
+                "            },\n" +
+                "            {\n" +
+                "                'NombreArtista' : 'German Traña Obando',\n" +
+                "                'categoriaArtista' : 'Pencil',\n" +
+                "                'PaisArtista' : 'Costa Rica'\n" +
+                "            },\n" +
+                "            {\n" +
+                "                'NombreArtista' : 'Pol Ledent',\n" +
+                "                'categoriaArtista' : 'Acrilic',\n" +
+                "                'PaisArtista' : 'Panama'\n" +
+                "            },\n" +
+                "            {\n" +
+                "                'NombreArtista' : 'Maribel Flores',\n" +
+                "                'categoriaArtista' : 'Oil',\n" +
+                "                'PaisArtista' : 'Nicaragua'\n" +
+                "            },\n" +
+                "            {\n" +
+                "               'NombreArtista' : 'Nana Tchelidze',\n" +
+                "                'categoriaArtista' : 'Canva',\n" +
+                "                'PaisArtista' : 'Guatemala'\n" +
+                "            }\n" +
+                "            ]")
+
+        for(i in 0 until jsonArtista.length())
+        {
+            val objartista = jsonArtista.get(i) as JSONObject
+            var Artista = artista()
+            Artista.NombreArtista = objartista.getString("NombreArtista")
+            Artista.categoriaArtista = objartista.getString("categoriaArtista")
+            Artista.PaisArtista = objartista.getString("PaisArtista")
+            fireDB.collection("Artista").document().set(Artista)
+        }
 
     }
     protected fun configNav()
